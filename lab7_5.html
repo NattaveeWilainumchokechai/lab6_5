@@ -1,0 +1,44 @@
+<html>
+    <head><meta charset="utf-8">
+        <script>
+            function addDetail(){
+                var textInput_name = document.getElementById("name")
+                var NA =textInput_name.value
+                var textInput_address = document.getElementById("address")
+                var AD =textInput_address.value
+                var textInput_tel = document.getElementById("tel")
+                var TE =textInput_tel.value
+
+                var Table = document.getElementById("tab")
+                var tr = document.createElement("tr")
+                Table.appendChild(tr)
+
+                var th1 = document.createElement("td")
+                th1.innerHTML=NA
+                var th2 = document.createElement("td")
+                th2.innerHTML=AD
+                var th3 = document.createElement("td")
+                th3.innerHTML=TE               
+                
+                tr.appendChild(th1)
+                tr.appendChild(th2)
+                tr.appendChild(th3)
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            ชื่อลูกค้า: <input type="text" id="name"><br>
+            ที่อยู่: <input type="text" id="address"><br>
+            โทรศัพท์: <input type="text" id="tel"><br>
+            <input type="button" id="add" value="เพิ่ม" onclick="addDetail()">
+        </form>
+            <table id="tab" border="1">
+                <tr id="trr">
+                    <th>ชื่อลูกค้า</th>
+                    <th>ที่อยู่</th>
+                    <th>โทรศัพท์</th>
+                </tr>
+            </table>
+    </body>
+</html>
